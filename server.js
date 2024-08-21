@@ -9,7 +9,9 @@ const mongoose = require("mongoose");
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://cooking-react-1.onrender.com'
+}));
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
